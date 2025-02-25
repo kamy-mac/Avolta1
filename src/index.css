@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Saans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #8F53F0;
+    --primary-dark: #7B3FDC;
+    --sand: #F5F3ED;
+    --day: #FFFFFF;
+    --night: #373737;
+  }
+
+  /* Typography Hierarchy */
+  h1, .h1 {
+    @apply text-h1 font-semibold text-night;
+  }
+
+  h2, .h2 {
+    @apply text-h2 font-semibold text-night;
+  }
+
+  h3, .h3 {
+    @apply text-h3 font-medium text-night;
+  }
+
+  h4, .h4 {
+    @apply text-h4 font-medium text-night;
+  }
+
+  p {
+    @apply text-base font-regular text-night;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    @apply font-semibold text-[3.5rem] leading-[1.2] tracking-[-0.02em];
+  }
+
+  .text-body-regular {
+    @apply text-base font-regular;
+  }
+
+  .text-body-medium {
+    @apply text-base font-medium;
+  }
+
+  .text-body-semibold {
+    @apply text-base font-semibold;
+  }
+
+  .text-small-regular {
+    @apply text-sm font-regular text-night/80;
+  }
+
+  .text-small-medium {
+    @apply text-sm font-medium text-night/80;
+  }
+
+  .text-small-semibold {
+    @apply text-sm font-semibold text-night/80;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-day px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-night text-day px-6 py-3 rounded-full font-medium hover:bg-night/90 transition-colors;
+  }
+
+  .card {
+    @apply bg-day rounded-2xl shadow-lg p-6;
+  }
+
+  .section {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Swiper customization */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
